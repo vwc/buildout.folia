@@ -9,7 +9,7 @@
             // enhancement.
             return;
         }
-        $('body').noisy({
+        $('xxbody').noisy({
             intensity: 0.75,
             size: 600,
             opacity: 0.15,

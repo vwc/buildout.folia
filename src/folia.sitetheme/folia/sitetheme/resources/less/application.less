@@ -3,7 +3,12 @@
 
 
 body {
-  //background:url(../img/bg-fabric-gray.jpg) 0 0 #f5f5f5;
+  background:url(../img/bg-fabric-gray.jpg) 0 0 #f5f5f5;
+}
+
+input.context,
+input.standalone {
+  .btn();
 }
 
 #toolbar + #topbar {
@@ -29,7 +34,8 @@ body {
     li {
       border-left: 2px solid #000;
       border-right: 1px solid @grayLight;
-      &.active a {
+      &.active a,
+      &.selected a {
         background: #d82020;
         #gradient > .vertical(#d82020, darken(#d82020, 20%));
       }
@@ -57,5 +63,4 @@ body {
 body > footer {
     margin-top: @line-height-base;
     padding: @line-height-base 0;
-    border-top: 1px solid @grayLighter;
 }
