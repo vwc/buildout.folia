@@ -9,8 +9,17 @@
             // enhancement.
             return;
         }
-        // Add custom javascript calls here
-        // e.g.
-        // $('#my-gallery').scrollable();
+        $('body').noisy({
+            intensity: 0.75,
+            size: 600,
+            opacity: 0.15,
+            monochrome: false
+        });
+        $('#content-wrapper').noisy({
+            intensity: 0.9,
+            size: 600,
+            opacity: 0.15,
+            monochrome: true
+        });
     });
 }(jQuery));
