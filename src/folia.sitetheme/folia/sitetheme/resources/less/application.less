@@ -58,6 +58,16 @@ input.standalone {
   .box-shadow(0 8px 6px -6px @gray);
 }
 
+#fp-content-wrapper {
+  background:url(../img/zeppelin.jpg) no-repeat 50% 0 transparent;
+  height: 550px;
+  .jumbotron {
+    background: transparent;
+    color: @gray;
+    text-transform: uppercase;
+  }
+}
+
 #sidebar {
   ul {
     .nav();
@@ -74,4 +84,14 @@ input.standalone {
 body > footer {
     margin-top: @line-height-base;
     padding: @line-height-base 0;
+    #footer-actions {
+      width: 280px;
+      .center-block();
+      a {
+        color: @grayLight;
+        text-transform: uppercase;
+        font-family: 'Cabin';
+        //font-weight: 700;
+      }
+    }
 }
