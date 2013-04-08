@@ -9,6 +9,15 @@
             // enhancement.
             return;
         }
+        $(".slidetabs").tabs('.panels > div.panel', {
+            effect: 'fade',
+            fadeOutSpeed: 1000,
+            rotate: true
+        }).slideshow({
+            autoplay: true,
+            interval: 6000,
+            clickable: false
+        });
         $('xxbody').noisy({
             intensity: 0.75,
             size: 600,

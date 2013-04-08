@@ -14,9 +14,29 @@
             <h1 tal:content="context/Title" />
         </header>
         <article id="content-core">
-            <div class="alert">
+            <tal:images tal:condition="view/has_images">
+            <div class="gallery" id="gallery-thumbs">
+              <tal:block tal:repeat="lines view/image_matrix">
+                <div class="row">
+                <tal:thumb tal:repeat="line lines">
+                <div class="panel col-span-4" tal:define="item line/item">
+                      <img class="thumbnail"
+                        tal:attributes="src item/thumb_url;
+                                        width item/thumb_width;
+                                        height item/thumb_height;
+                                        data-image-url item/original_url;
+                                        data-image-width item/original_width;
+                                        data-image-height item/original_height" />
+                </div>
+                </tal:thumb>
+                </div>
+              </tal:block>
+            </div>
+            </tal:images>
+
+            <div class="alert" tal:condition="not:view/has_images">
                 <h4>Info</h4>
-                <p>Thumbnail view: the image thumb listing will be inserted here.</p>
+                <p>Es gibt keine Bilder in diesem Ordner</p>
             </div>
         </article>
     </section>

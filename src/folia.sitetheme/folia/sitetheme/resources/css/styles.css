@@ -5446,6 +5446,52 @@ input.standalone .badge {
   font-weight: 500;
   color: #fff;
 }
+.gallery .panels {
+  background: transparent;
+  position: relative;
+  height: 300px;
+  width: 560px;
+  float: left;
+  margin: 15px;
+  cursor: pointer;
+}
+.gallery .panels .panel {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 7px;
+  padding: 0px;
+  height: 310px;
+  background: transparent;
+}
+.gallery .slidetabs {
+  clear: both;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+  position: relative;
+  top: 20px;
+  height: 20px;
+  padding-left: 40px;
+  width: 480px;
+}
+.gallery .slidetabs a {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  float: left;
+  margin: 3px;
+  background: #555555;
+  display: block;
+  font-size: 1px;
+}
+.gallery .slidetabs a:hover {
+  background: #d82020;
+}
+.gallery .slidetabs a.current {
+  background: #d82020;
+}
 body > footer {
   margin-top: 20px;
   padding: 20px 0;

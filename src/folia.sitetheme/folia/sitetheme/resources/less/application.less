@@ -79,6 +79,60 @@ input.standalone {
   }
 }
 
+// Image gallery styles 
+// ---------------------
+
+.gallery {
+  .panels {
+    background:transparent;
+    //border:1px solid #ccc;
+    position:relative;
+    height:300px;
+
+    width:560px;
+    float:left;
+    margin:15px;
+    cursor:pointer;
+    .panel {
+      display:none;
+      position:absolute;
+      top:0;
+      left:0;
+      margin:7px;
+      padding:0px;
+      height:310px;
+      background: transparent;
+    }
+  }
+  .slidetabs {
+        //clear:both;
+        clear: both;
+        background: #fff;
+        background: rgba(255,255,255,.50);
+        display: block;
+        position: relative;
+        top: 20px;
+        height: 20px;
+        padding-left: 40px;
+        width: 480px;
+        //z-index: @zindexModal;
+        a {
+            .square(12px);
+            border-radius: 50%;
+            float:left;
+            margin:3px;
+            background:@gray;
+            display:block;
+            font-size:1px;
+            &:hover {
+                background:@link-color;
+            }
+            &.current {
+                background:@link-color;
+            }
+        }
+    }
+}
 
 // folia styles for a HMTL5 based site footer
 body > footer {

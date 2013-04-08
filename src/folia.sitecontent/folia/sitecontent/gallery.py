@@ -2,7 +2,7 @@ import math
 from five import grok
 
 from Acquisition import aq_inner
-from zope.compoment import getMultiAdapter
+from zope.component import getMultiAdapter
 
 from Products.CMFCore.interfaces import IFolderish
 
@@ -20,7 +20,7 @@ class GalleryView(grok.View):
         data = []
         for item in images:
             info = {}
-            info['title'] = item.Title
+            info['title'] = item.Title()
             thumb = self.getImageTag(item, scalename='thumb')
             info['thumb_url'] = thumb['url']
             info['thumb_width'] = thumb['width']

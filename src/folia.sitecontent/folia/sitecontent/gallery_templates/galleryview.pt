@@ -14,9 +14,40 @@
             <h1 tal:content="context/Title" />
         </header>
         <article id="content-core">
-            <div class="alert">
+            <tal:images tal:condition="view/has_images">
+            <div class="gallery" id="gallery-slider">
+                <a class="prev browse left" id="thumb-prev">
+                  <i class="icon-chevron-left"></i>
+                </a>
+                <div class="panels">
+                    <tal:thumb tal:repeat="item view/image_list">
+                    <div class="panel">
+                          <img class="thumbnail"
+                            tal:attributes="src item/original_url;
+                                            width item/original_width;
+                                            height item/original_height;
+                                            data-image-url item/original_url;
+                                            data-image-width item/original_width;
+                                            data-image-height item/original_height" />
+                    </div>
+                    </tal:thumb>
+                </div>
+                <a class="next browse right" id="thumb-next">
+                  <i class="icon-chevron-right"></i>
+                </a>
+              <div class="slidetabs visualClear">
+                <tal:tabnav tal:repeat="tab view/contained_images">
+                  <a href="#"
+                    tal:define="tab_id tab/getId;"
+                    tal:attributes="href python:'#' + tab_id"></a>
+                </tal:tabnav>
+              </div>
+            </div>
+            </tal:images>
+
+            <div class="alert" tal:condition="not:view/has_images">
                 <h4>Info</h4>
-                <p>Gallery view: the image content slider will be inserted here.</p>
+                <p>Es gibt keine Bilder in diesem Ordner</p>
             </div>
         </article>
     </section>
