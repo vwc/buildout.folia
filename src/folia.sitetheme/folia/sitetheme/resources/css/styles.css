@@ -5403,8 +5403,11 @@ input.standalone .badge {
   box-shadow: 0 8px 6px -6px #555555;
 }
 #fp-content-wrapper {
-  background: url(../img/zeppelin.jpg) no-repeat 50% 0 transparent;
+  background: url(../img/cloudy-skies.jpg) no-repeat 50% 0 transparent;
   height: 550px;
+}
+#fp-content-wrapper #fp-content {
+  background: url(../img/airship.png) no-repeat 50% 50% transparent;
 }
 #fp-content-wrapper .jumbotron {
   background: transparent;
