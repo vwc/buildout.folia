@@ -5396,23 +5396,31 @@ input.standalone .badge {
   font-size: 12px;
 }
 #content-wrapper {
-  padding: 50px 0;
+  padding: 20px 0 50px 0;
   color: #eeeeee;
   background: #555555;
   -webkit-box-shadow: 0 8px 6px -6px #555555;
   box-shadow: 0 8px 6px -6px #555555;
 }
+#content-wrapper .page-header h1,
+#content-wrapper .documentFirstHeading {
+  text-transform: uppercase;
+}
 #fp-content-wrapper {
-  background: url(../img/cloudy-skies.jpg) no-repeat 50% 0 transparent;
+  background: url(../img/bg-clouds.jpg) no-repeat 50% 0 transparent;
   height: 550px;
 }
 #fp-content-wrapper #fp-content {
-  background: url(../img/airship.png) no-repeat 50% 50% transparent;
+  background: url(../img/airship.png) no-repeat 50% 100% transparent;
 }
 #fp-content-wrapper .jumbotron {
   background: transparent;
   color: #555555;
   text-transform: uppercase;
+  padding-bottom: 200px;
+}
+#sidebar {
+  padding-top: 100px;
 }
 #sidebar ul {
   margin-left: 0;
@@ -5444,6 +5452,10 @@ input.standalone .badge {
 #sidebar ul:after {
   clear: both;
 }
+#sidebar li.navTreeItem {
+  background: url(../img/bullet-small.png) no-repeat 0px 0px transparent;
+  padding-left: 20px;
+}
 #sidebar li.navTreeItem > a {
   font-family: 'Cabin';
   font-weight: 500;
@@ -5470,13 +5482,11 @@ input.standalone .badge {
 }
 .gallery .slidetabs {
   clear: both;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.5);
   display: block;
   position: relative;
   top: 20px;
   height: 20px;
-  padding-left: 40px;
+  padding-left: 50px;
   width: 480px;
 }
 .gallery .slidetabs a {
@@ -5485,7 +5495,7 @@ input.standalone .badge {
   border-radius: 50%;
   float: left;
   margin: 3px;
-  background: #555555;
+  background: #eeeeee;
   display: block;
   font-size: 1px;
 }
@@ -5494,6 +5504,9 @@ input.standalone .badge {
 }
 .gallery .slidetabs a.current {
   background: #d82020;
+}
+#gallery-thumbs img {
+  margin: 20px;
 }
 body > footer {
   margin-top: 20px;

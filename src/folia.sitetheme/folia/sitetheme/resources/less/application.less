@@ -52,28 +52,38 @@ input.standalone {
 // --------------------------
 
 #content-wrapper {
-  padding: @navbar-height 0;
+  padding: @line-height-base 0 @navbar-height 0;
   color: @grayLighter;
   background: @gray;
   .box-shadow(0 8px 6px -6px @gray);
+  .page-header h1,
+  .documentFirstHeading {
+    text-transform: uppercase;
+  }
 }
 
 #fp-content-wrapper {
-  background:url(../img/cloudy-skies.jpg) no-repeat 50% 0 transparent;
+  background:url(../img/bg-clouds.jpg) no-repeat 50% 0 transparent;
   height: 550px;
   #fp-content {
-    background:url(../img/airship.png) no-repeat 50% 50% transparent;
+    background:url(../img/airship.png) no-repeat 50% 100% transparent;
   }
   .jumbotron {
     background:transparent;
     color: @gray;
     text-transform: uppercase;
+    padding-bottom: @navbar-height * 4;
   }
 }
 
 #sidebar {
+  padding-top: @navbar-height * 2;
   ul {
     .nav();
+  }
+  li.navTreeItem {
+    background:url(../img/bullet-small.png) no-repeat 0px 0px transparent;
+    padding-left: @line-height-base;
   }
   li.navTreeItem > a {
     font-family: 'Cabin';
@@ -110,13 +120,13 @@ input.standalone {
   .slidetabs {
         //clear:both;
         clear: both;
-        background: #fff;
-        background: rgba(255,255,255,.50);
+        //background: #fff;
+        //background: rgba(255,255,255,.50);
         display: block;
         position: relative;
         top: 20px;
         height: 20px;
-        padding-left: 40px;
+        padding-left: @navbar-height;
         width: 480px;
         //z-index: @zindexModal;
         a {
@@ -124,7 +134,7 @@ input.standalone {
             border-radius: 50%;
             float:left;
             margin:3px;
-            background:@gray;
+            background:@grayLighter;
             display:block;
             font-size:1px;
             &:hover {
@@ -135,6 +145,10 @@ input.standalone {
             }
         }
     }
+}
+
+#gallery-thumbs img {
+  margin: @line-height-base;
 }
 
 // folia styles for a HMTL5 based site footer

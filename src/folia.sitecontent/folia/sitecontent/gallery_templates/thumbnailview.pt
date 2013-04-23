@@ -19,7 +19,7 @@
               <tal:block tal:repeat="lines view/image_matrix">
                 <div class="row">
                 <tal:thumb tal:repeat="line lines">
-                <div class="panel col-span-4" tal:define="item line/item">
+                <div class="col-span-3 panel" tal:define="item line/item">
                       <img class="thumbnail"
                         tal:attributes="src item/thumb_url;
                                         width item/thumb_width;

@@ -64,13 +64,13 @@ class ThumbnailView(grok.View):
     def image_matrix(self):
         items = self.image_list()
         count = len(items)
-        rowcount = count / 3.0
+        rowcount = count / 4.0
         rows = math.ceil(rowcount)
         matrix = []
         for i in range(int(rows)):
             row = []
-            for j in range(3):
-                index = 3 * i + j
+            for j in range(4):
+                index = 4 * i + j
                 if index <= int(count - 1):
                     cell = {}
                     cell['item'] = items[index]
@@ -105,7 +105,7 @@ class ThumbnailView(grok.View):
         obj = item.getObject()
         scales = getMultiAdapter((obj, self.request), name='images')
         if scalename == 'thumb':
-            scale = scales.scale('image', width=128, height=71)
+            scale = scales.scale('image', width=128, height=128)
         else:
             scale = scales.scale('image', width=535, height=300)
         item = {}
