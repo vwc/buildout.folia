@@ -5461,6 +5461,10 @@ input.standalone .badge {
   font-weight: 500;
   color: #fff;
 }
+#sidebar li.navTreeItem > a.navTreeCurrentItem,
+#sidebar li.navTreeItem > a.navTreeCurrentNode {
+  color: #d82020;
+}
 .gallery .panels {
   background: transparent;
   position: relative;

@@ -45,6 +45,12 @@
             </div>
             </tal:images>
 
+            <div class="visualClear">&nbsp;</div>
+            <section class="container">
+            <p tal:condition="context/Description"
+              tal:content="context/Description" />
+            </section>
+
             <div class="alert" tal:condition="not:view/has_images">
                 <h4>Info</h4>
                 <p>Es gibt keine Bilder in diesem Ordner</p>
