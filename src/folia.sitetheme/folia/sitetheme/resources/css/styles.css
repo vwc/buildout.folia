@@ -5509,8 +5509,9 @@ input.standalone .badge {
 .gallery .slidetabs a.current {
   background: #d82020;
 }
-#gallery-thumbs img {
-  margin: 20px;
+#gallery-thumbs a.thumbnail {
+  background: #fff;
+  margin-bottom: 20px;
 }
 body > footer {
   margin-top: 20px;

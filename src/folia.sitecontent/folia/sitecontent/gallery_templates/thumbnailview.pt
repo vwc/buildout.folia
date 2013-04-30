@@ -20,13 +20,17 @@
                 <div class="row">
                 <tal:thumb tal:repeat="line lines">
                 <div class="col-span-3 panel" tal:define="item line/item">
-                      <img class="thumbnail"
+                  <a href="" class="thumbnail"
+                    tal:attributes="href item/original_url;
+                                    rel string:prettyPhoto[gallery];">
+                      <img class="xxthumbnail"
                         tal:attributes="src item/thumb_url;
                                         width item/thumb_width;
                                         height item/thumb_height;
                                         data-image-url item/original_url;
                                         data-image-width item/original_width;
                                         data-image-height item/original_height" />
+                  </a>
                 </div>
                 </tal:thumb>
                 </div>
