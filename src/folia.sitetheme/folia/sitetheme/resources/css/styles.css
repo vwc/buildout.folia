@@ -5390,10 +5390,18 @@ input.standalone .badge {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd82020', endColorstr='#ff7f1313', GradientType=0);
 }
+#sections #main-nav li.active a:hover,
+#sections #main-nav li.selected a:hover {
+  background: #7f1313;
+}
 #sections #main-nav li > a {
   padding: 20px;
   text-transform: uppercase;
   font-size: 12px;
+  color: #fff;
+}
+#sections #main-nav li > a:hover {
+  background: #333;
 }
 #content-wrapper {
   padding: 20px 0 50px 0;
@@ -5405,6 +5413,12 @@ input.standalone .badge {
 #content-wrapper .page-header h1,
 #content-wrapper .documentFirstHeading {
   text-transform: uppercase;
+}
+body.section-disclaimer .documentFirstHeading {
+  text-align: center;
+}
+#gallery .page-header {
+  border: none;
 }
 #fp-content-wrapper {
   background: url(../img/bg-clouds.jpg) no-repeat 50% 0 transparent;
@@ -5490,7 +5504,7 @@ input.standalone .badge {
   position: relative;
   top: 20px;
   height: 20px;
-  padding-left: 50px;
+  padding-left: 200px;
   width: 480px;
 }
 .gallery .slidetabs a {
@@ -5513,6 +5527,9 @@ input.standalone .badge {
   background: #fff;
   margin-bottom: 20px;
 }
+#gallery-caption {
+  margin-top: 20px;
+}
 body > footer {
   margin-top: 20px;
   padding: 20px 0;
@@ -5524,7 +5541,7 @@ body > footer #footer-actions {
   margin-right: auto;
 }
 body > footer #footer-actions a {
-  color: #999999;
+  color: #808080;
   text-transform: uppercase;
   font-family: 'Cabin';
 }

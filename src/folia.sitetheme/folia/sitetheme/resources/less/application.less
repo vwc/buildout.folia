@@ -38,12 +38,19 @@ input.standalone {
       &.selected a {
         background: #d82020;
         #gradient > .vertical(#d82020, darken(#d82020, 20%));
+        &:hover {
+          background:darken(#d82020, 20%);
+        }
       }
     }
     li > a {
       padding: @line-height-base;
       text-transform: uppercase;
       font-size: @font-size-base - 2px;
+      color: #fff;
+      &:hover {
+        background: #333;
+      }
     }
   }
 }
@@ -60,6 +67,16 @@ input.standalone {
   .documentFirstHeading {
     text-transform: uppercase;
   }
+}
+
+body.section-disclaimer {
+  .documentFirstHeading {
+    .text-center();
+  }
+}
+
+#gallery .page-header {
+  border: none;
 }
 
 #fp-content-wrapper {
@@ -130,7 +147,7 @@ input.standalone {
         position: relative;
         top: 20px;
         height: 20px;
-        padding-left: @navbar-height;
+        padding-left: 200px;
         width: 480px;
         //z-index: @zindexModal;
         a {
@@ -160,6 +177,10 @@ input.standalone {
   //margin: @line-height-base;
 }
 
+#gallery-caption {
+  margin-top: @line-height-base;
+}
+
 // folia styles for a HMTL5 based site footer
 body > footer {
     margin-top: @line-height-base;
@@ -168,7 +189,7 @@ body > footer {
       width: 280px;
       .center-block();
       a {
-        color: @grayLight;
+        color: darken(@grayLight, 10%);
         text-transform: uppercase;
         font-family: 'Cabin';
         //font-weight: 700;

@@ -8,6 +8,8 @@
          tiles editiong overlays -->
     <!--<theme href="minimal.html" if-path="@@edit-tile" />-->
     <theme href="frontpage.html" css:if-content="body.section-front-page" />
+
+    <theme href="theme-wide.html" css:if-content="body.section-disclaimer" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
