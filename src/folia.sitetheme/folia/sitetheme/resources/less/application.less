@@ -1,6 +1,9 @@
 // Custom application specific styles
 //--------------------------------------
 
+@brand-primary:         #d82020;
+@font-family-sans-serif:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headings-font-family:    'Roboto', inherit; // empty to use BS default, @font-family-base
 
 body {
   background:url(../img/bg-fabric-gray.jpg) 0 0 #f5f5f5;
@@ -28,12 +31,13 @@ input.standalone {
 }
 
 #sections {
-  margin-top: @line-height-base;
+  margin-top: @line-height-computed;
   #gradient > .vertical(#4b4b4b, #333);
   #main-nav {
+    .box-shadow(0 8px 6px -6px @gray);
     li {
       border-left: 2px solid #000;
-      border-right: 1px solid @grayLight;
+      border-right: 1px solid @gray-light;
       &.active a,
       &.selected a {
         background: #d82020;
@@ -44,7 +48,7 @@ input.standalone {
       }
     }
     li > a {
-      padding: @line-height-base;
+      padding: @line-height-computed;
       text-transform: uppercase;
       font-size: @font-size-base - 2px;
       color: #fff;
@@ -59,8 +63,8 @@ input.standalone {
 // --------------------------
 
 #content-wrapper {
-  padding: @line-height-base 0 @navbar-height 0;
-  color: @grayLighter;
+  padding: @line-height-computed 0 @navbar-height 0;
+  color: @gray-lighter;
   background: @gray;
   .box-shadow(0 8px 6px -6px @gray);
   .page-header h1,
@@ -88,8 +92,12 @@ body.section-disclaimer {
   .jumbotron {
     background:transparent;
     color: @gray;
+    font-weight: 700;
     text-transform: uppercase;
     padding-bottom: @navbar-height * 4;
+    h1, h2 {
+      font-weight: 700;
+    }
   }
 }
 
@@ -100,10 +108,10 @@ body.section-disclaimer {
   }
   li.navTreeItem {
     background:url(../img/bullet-small.png) no-repeat 0px 0px transparent;
-    padding-left: @line-height-base;
+    padding-left: @line-height-computed;
   }
   li.navTreeItem > a {
-    font-family: 'Cabin';
+    font-family: 'Roboto';
     font-weight: 500;
     color: #fff;
     &.navTreeCurrentItem,
@@ -155,7 +163,7 @@ body.section-disclaimer {
             border-radius: 50%;
             float:left;
             margin:3px;
-            background:@grayLighter;
+            background:@gray-lighter;
             display:block;
             font-size:1px;
             &:hover {
@@ -170,29 +178,33 @@ body.section-disclaimer {
 
 #gallery-thumbs a.thumbnail {
   background: #fff;
-  margin-bottom: @line-height-base;
+  margin-bottom: @line-height-computed;
 }
 
 #gallery-thumbs img {
-  //margin: @line-height-base;
+  //margin: @line-height-computed;
 }
 
 #gallery-caption {
-  margin-top: @line-height-base;
+  margin-top: @line-height-computed;
 }
 
 // folia styles for a HMTL5 based site footer
 body > footer {
-    margin-top: @line-height-base;
-    padding: @line-height-base 0;
+    margin-top: @line-height-computed;
+    padding: @line-height-computed 0;
     #footer-actions {
       width: 280px;
       .center-block();
       a {
-        color: darken(@grayLight, 10%);
+        color: darken(@gray-light, 10%);
         text-transform: uppercase;
-        font-family: 'Cabin';
         //font-weight: 700;
+        &:hover,
+        &:focus {
+          color: @link-color;
+          background: transparent;
+        }
       }
     }
 }
