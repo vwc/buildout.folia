@@ -42,6 +42,7 @@ input.standalone {
       &.active a,
       &.selected a {
         background: #d82020;
+        border-radius: 0px;
         #gradient > .vertical(#d82020, darken(#d82020, 20%));
         &:hover {
           background:darken(#d82020, 20%);
@@ -88,7 +89,7 @@ body.section-disclaimer {
 }
 
 #fp-content-wrapper {
-  background:url(../img/bg-clouds-small.jpg) no-repeat 50% 0 transparent;
+  background:url(../img/bg-clouds-smaller.jpg) no-repeat 50% 0 transparent;
   height: 550px;
   .box-shadow(0 8px 6px -6px @gray);
   #fp-content {
@@ -136,13 +137,11 @@ body.section-disclaimer {
 .gallery {
   .panels {
     background:transparent;
-    //border:1px solid #ccc;
     position:relative;
-    height:300px;
-
-    width:560px;
+    height:370px;
+    width:620px;
     float:left;
-    margin:15px;
+    margin:0px;
     cursor:pointer;
     .panel {
       display:none;
@@ -162,16 +161,16 @@ body.section-disclaimer {
         //background: rgba(255,255,255,.50);
         display: block;
         position: relative;
-        top: 20px;
+        top: 10px;
         height: 20px;
-        padding-left: 200px;
-        width: 480px;
+        padding-left: 240px;
+        width: 620px;
         //z-index: @zindexModal;
         a {
-            .square(12px);
+            .square(10px);
             border-radius: 50%;
             float:left;
-            margin:3px;
+            margin:3px 10px 3px 3px;
             background:@gray-lighter;
             display:block;
             font-size:1px;

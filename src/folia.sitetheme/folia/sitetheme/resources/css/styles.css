@@ -5224,6 +5224,7 @@ input.standalone .badge {
 #sections #main-nav li.active a,
 #sections #main-nav li.selected a {
   background: #d82020;
+  border-radius: 0px;
   background-color: #7f1313;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d82020), to(#7f1313));
   background-image: -webkit-linear-gradient(top, #d82020, #7f1313);
@@ -5266,7 +5267,7 @@ body.section-disclaimer .documentFirstHeading {
   border: none;
 }
 #fp-content-wrapper {
-  background: url(../img/bg-clouds-small.jpg) no-repeat 50% 0 transparent;
+  background: url(../img/bg-clouds-smaller.jpg) no-repeat 50% 0 transparent;
   height: 550px;
   -webkit-box-shadow: 0 8px 6px -6px #555555;
   box-shadow: 0 8px 6px -6px #555555;
@@ -5388,10 +5389,10 @@ body.section-disclaimer .documentFirstHeading {
 .gallery .panels {
   background: transparent;
   position: relative;
-  height: 300px;
-  width: 560px;
+  height: 370px;
+  width: 620px;
   float: left;
-  margin: 15px;
+  margin: 0px;
   cursor: pointer;
 }
 .gallery .panels .panel {
@@ -5408,17 +5409,17 @@ body.section-disclaimer .documentFirstHeading {
   clear: both;
   display: block;
   position: relative;
-  top: 20px;
+  top: 10px;
   height: 20px;
-  padding-left: 200px;
-  width: 480px;
+  padding-left: 240px;
+  width: 620px;
 }
 .gallery .slidetabs a {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   float: left;
-  margin: 3px;
+  margin: 3px 10px 3px 3px;
   background: #eeeeee;
   display: block;
   font-size: 1px;
