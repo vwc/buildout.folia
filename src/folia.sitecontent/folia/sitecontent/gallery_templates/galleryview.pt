@@ -16,13 +16,13 @@
         <article id="content-core">
             <tal:images tal:condition="view/has_images">
             <div class="gallery" id="gallery-slider">
-                <a class="prev browse left" id="thumb-prev">
+                <a class="hidden prev browse pull-left" id="thumb-prev">
                   <i class="icon-chevron-left"></i>
                 </a>
                 <div class="panels">
                     <tal:thumb tal:repeat="item view/image_list">
                     <div class="panel">
-                          <img class="thumbnail"
+                          <img class="ximg-thumbnail"
                             tal:attributes="src item/original_url;
                                             width item/original_width;
                                             height item/original_height;
@@ -32,7 +32,7 @@
                     </div>
                     </tal:thumb>
                 </div>
-                <a class="next browse right" id="thumb-next">
+                <a class="hidden next browse pull-right" id="thumb-next">
                   <i class="icon-chevron-right"></i>
                 </a>
               <div class="slidetabs visualClear">
@@ -46,7 +46,7 @@
             </tal:images>
 
             <div class="visualClear">&nbsp;</div>
-            <section class="container" id="gallery-caption">
+            <section class="xcontainer" id="gallery-caption">
               <p tal:condition="context/Description"
                 tal:content="context/Description" />
             </section>

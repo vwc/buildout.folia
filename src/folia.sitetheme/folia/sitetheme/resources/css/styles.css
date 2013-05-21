@@ -5193,6 +5193,7 @@ input.standalone .badge {
 }
 #topbar {
   padding-top: 50px;
+  width: 960px;
 }
 #logo {
   background: url(../img/logo.png) no-repeat 0 0 transparent;
@@ -5251,6 +5252,9 @@ input.standalone .badge {
   -webkit-box-shadow: 0 8px 6px -6px #555555;
   box-shadow: 0 8px 6px -6px #555555;
 }
+#content-wrapper .container {
+  width: 960px;
+}
 #content-wrapper .page-header h1,
 #content-wrapper .documentFirstHeading {
   text-transform: uppercase;
@@ -5262,11 +5266,13 @@ body.section-disclaimer .documentFirstHeading {
   border: none;
 }
 #fp-content-wrapper {
-  background: url(../img/bg-clouds.jpg) no-repeat 50% 0 transparent;
+  background: url(../img/bg-clouds-small.jpg) no-repeat 50% 0 transparent;
   height: 550px;
+  -webkit-box-shadow: 0 8px 6px -6px #555555;
+  box-shadow: 0 8px 6px -6px #555555;
 }
 #fp-content-wrapper #fp-content {
-  background: url(../img/airship.png) no-repeat 50% 100% transparent;
+  background: url(../img/airship-lg.png) no-repeat 50% 100% transparent;
 }
 #fp-content-wrapper .jumbotron {
   background: transparent;
@@ -5365,15 +5371,19 @@ body.section-disclaimer .documentFirstHeading {
 #sidebar li.navTreeItem {
   background: url(../img/bullet-small.png) no-repeat 0px 0px transparent;
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 #sidebar li.navTreeItem > a {
   font-family: 'Roboto';
   font-weight: 500;
   color: #fff;
+  padding: 0px;
 }
+#sidebar li.navTreeItem > a:hover,
 #sidebar li.navTreeItem > a.navTreeCurrentItem,
 #sidebar li.navTreeItem > a.navTreeCurrentNode {
   color: #d82020;
+  background: transparent;
 }
 .gallery .panels {
   background: transparent;

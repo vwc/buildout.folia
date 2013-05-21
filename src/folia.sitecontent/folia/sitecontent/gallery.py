@@ -64,13 +64,13 @@ class ThumbnailView(grok.View):
     def image_matrix(self):
         items = self.image_list()
         count = len(items)
-        rowcount = count / 4.0
+        rowcount = count / 3.0
         rows = math.ceil(rowcount)
         matrix = []
         for i in range(int(rows)):
             row = []
-            for j in range(4):
-                index = 4 * i + j
+            for j in range(3):
+                index = 3 * i + j
                 if index <= int(count - 1):
                     cell = {}
                     cell['item'] = items[index]

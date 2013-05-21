@@ -20,6 +20,7 @@ input.standalone {
 
 #topbar {
   padding-top: @navbar-height;
+  width: 960px;
 }
 
 #logo {
@@ -67,6 +68,9 @@ input.standalone {
   color: @gray-lighter;
   background: @gray;
   .box-shadow(0 8px 6px -6px @gray);
+  .container {
+    width: 960px;
+  }
   .page-header h1,
   .documentFirstHeading {
     text-transform: uppercase;
@@ -84,10 +88,11 @@ body.section-disclaimer {
 }
 
 #fp-content-wrapper {
-  background:url(../img/bg-clouds.jpg) no-repeat 50% 0 transparent;
+  background:url(../img/bg-clouds-small.jpg) no-repeat 50% 0 transparent;
   height: 550px;
+  .box-shadow(0 8px 6px -6px @gray);
   #fp-content {
-    background:url(../img/airship.png) no-repeat 50% 100% transparent;
+    background:url(../img/airship-lg.png) no-repeat 50% 100% transparent;
   }
   .jumbotron {
     background:transparent;
@@ -109,14 +114,18 @@ body.section-disclaimer {
   li.navTreeItem {
     background:url(../img/bullet-small.png) no-repeat 0px 0px transparent;
     padding-left: @line-height-computed;
+    margin-bottom: @line-height-computed / 2;
   }
   li.navTreeItem > a {
     font-family: 'Roboto';
     font-weight: 500;
     color: #fff;
+    padding: 0px;
+    &:hover,
     &.navTreeCurrentItem,
     &.navTreeCurrentNode {
       color: #d82020;
+      background: transparent;
     }
   }
 }
