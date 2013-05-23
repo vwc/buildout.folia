@@ -18,3 +18,11 @@ class InfoBarViewlet(grok.Viewlet):
                                  name="plone_portal_state")
         self.portal_url = pstate.portal_url()
         self.context_url = context.absolute_url()
+
+    def isActiveItem(self, itemid):
+        context = aq_inner(self.context)
+        context_id = context.getId()
+        if itemid == context_id:
+            return 'navitem active'
+        else:
+            return 'navitem'

@@ -1,3 +1,17 @@
 <section id="infobar">
   <div tal:attributes="data-tile string:${context/absolute_url}/@@vwc.tiles.richtext/infobar-text" />
 </section>
+
+<div id="footer-actions">
+  <ul class="nav nav-pills nav-justified"
+    tal:define="portal_url viewlet/portal_url">
+    <li tal:attributes="class python:viewlet.isActiveItem('umweltpakt')">
+        <a href="/umweltpakt" tal:attributes="href python:portal_url + '/umweltpakt'">
+            Umweltpakt</a>
+    </li>
+    <li tal:attributes="class python:viewlet.isActiveItem('disclaimer')">
+        <a href="/disclaimer" tal:attributes="href python:portal_url + '/disclaimer'">
+            Disclaimer</a>
+    </li>
+  </ul>
+</div>

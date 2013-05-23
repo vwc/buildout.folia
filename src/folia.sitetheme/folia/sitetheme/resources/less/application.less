@@ -54,6 +54,7 @@ input.standalone {
       text-transform: uppercase;
       font-size: @font-size-base - 2px;
       color: #fff;
+      border-radius: 0px;
       &:hover {
         background: #333;
       }
@@ -75,6 +76,8 @@ input.standalone {
   .page-header h1,
   .documentFirstHeading {
     text-transform: uppercase;
+    font-size: ceil(@font-size-base * 2.25);
+    font-weight: 500;
   }
 }
 
@@ -213,6 +216,10 @@ body > footer {
           color: @link-color;
           background: transparent;
         }
+      }
+      li.active > a {
+        color: @link-color;
+        background:transparent;
       }
     }
 }

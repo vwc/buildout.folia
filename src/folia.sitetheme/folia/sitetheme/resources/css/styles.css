@@ -5242,6 +5242,7 @@ input.standalone .badge {
   text-transform: uppercase;
   font-size: 12px;
   color: #fff;
+  border-radius: 0px;
 }
 #sections #main-nav li > a:hover {
   background: #333;
@@ -5259,6 +5260,8 @@ input.standalone .badge {
 #content-wrapper .page-header h1,
 #content-wrapper .documentFirstHeading {
   text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 500;
 }
 body.section-disclaimer .documentFirstHeading {
   text-align: center;
@@ -5453,6 +5456,10 @@ body > footer #footer-actions a {
 }
 body > footer #footer-actions a:hover,
 body > footer #footer-actions a:focus {
+  color: #d82020;
+  background: transparent;
+}
+body > footer #footer-actions li.active > a {
   color: #d82020;
   background: transparent;
 }
