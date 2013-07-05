@@ -44,7 +44,7 @@ class GalleryView(grok.View):
         if scalename == 'thumb':
             scale = scales.scale('image', width=128, height=71)
         else:
-            scale = scales.scale('image', width=620, height=535)
+            scale = scales.scale('image', width=768, height=768)
         item = {}
         if scale is not None:
             item['url'] = scale.url
