@@ -2,8 +2,8 @@
 //--------------------------------------
 
 @brand-primary:         #d82020;
-@font-family-sans-serif:  'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
-@headings-font-family:    'Roboto', inherit; // empty to use BS default, @font-family-base
+@font-family-sans-serif:  'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headings-font-family:    'Roboto Condensed', inherit; // empty to use BS default, @font-family-base
 
 body {
   background:url(../img/bg-fabric-gray.jpg) 0 0 #f5f5f5;
@@ -33,7 +33,7 @@ input.standalone {
 
 #sections {
   margin-top: @line-height-computed;
-  #gradient > .vertical(#4b4b4b, #333);
+  #gradient > .vertical(#4b4b4b, 0%, #333, 100%);
   #main-nav {
     .box-shadow(0 8px 6px -6px @gray);
     li {
@@ -43,14 +43,14 @@ input.standalone {
       &.selected a {
         background: #d82020;
         border-radius: 0px;
-        #gradient > .vertical(#d82020, darken(#d82020, 20%));
+        #gradient > .vertical(#d82020, 0%, darken(#d82020, 20%), 100%);
         &:hover {
           background:darken(#d82020, 20%);
         }
       }
     }
     li > a {
-      padding: @line-height-computed;
+      padding: @line-height-computed * 1.5 @line-height-computed;
       text-transform: uppercase;
       font-size: @font-size-base - 2px;
       color: #fff;
@@ -61,6 +61,7 @@ input.standalone {
     }
   }
 }
+
 
 // Content area
 // --------------------------

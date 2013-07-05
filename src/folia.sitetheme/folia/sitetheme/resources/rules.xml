@@ -69,7 +69,7 @@
             css:theme="#portal-searchbox" />-->
 
         <!-- Global navigation -->
-        <replace css:content="#portal-globalnav li"
+        <replace css:content-children="#portal-globalnav"
             css:theme-children="#main-nav" />
 
         <!-- Breadcrumbs -->
