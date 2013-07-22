@@ -1,9 +1,6 @@
 // Custom application specific styles
 //--------------------------------------
 
-@brand-primary:         #d82020;
-@font-family-sans-serif:  'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
-@headings-font-family:    'Roboto Condensed', inherit; // empty to use BS default, @font-family-base
 
 body {
   background:url(../img/bg-fabric-gray.jpg) 0 0 #f5f5f5;
@@ -78,7 +75,7 @@ input.standalone {
   .documentFirstHeading {
     text-transform: uppercase;
     font-size: ceil(@font-size-base * 2.25);
-    font-weight: 500;
+    font-weight: 700;
   }
 }
 
@@ -189,8 +186,10 @@ body.section-disclaimer {
 }
 
 #gallery-thumbs a.thumbnail {
-  background: #fff;
-  margin-bottom: @line-height-computed;
+  background: transparent;
+  margin-bottom: @line-height-computed / 3;
+  border-radius: 0px;
+  border-color: @gray;
 }
 
 #gallery-thumbs img {
@@ -211,7 +210,7 @@ body > footer {
       a {
         color: darken(@gray-light, 10%);
         text-transform: uppercase;
-        //font-weight: 700;
+        font-weight: 700;
         &:hover,
         &:focus {
           color: @link-color;

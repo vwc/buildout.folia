@@ -11,7 +11,7 @@ env.hosts = ['6zu4']
 env.webserver = '/opt/webserver/buildout.webserver'
 env.code_root = '/opt/sites/folia/buildout.folia'
 env.local_root = '/Users/cb/dev/folia/buildout.folia'
-env.sitename = 're'
+env.sitename = 'folia'
 env.code_user = 'root'
 env.prod_user = 'www'
 

@@ -105,7 +105,7 @@ class ThumbnailView(grok.View):
         obj = item.getObject()
         scales = getMultiAdapter((obj, self.request), name='images')
         if scalename == 'thumb':
-            scale = scales.scale('image', width=200, height=200)
+            scale = scales.scale('image', width=200, height=116)
         else:
             scale = scales.scale('image', width=535, height=300)
         item = {}
