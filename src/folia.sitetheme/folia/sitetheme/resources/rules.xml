@@ -10,6 +10,7 @@
     <theme href="frontpage.html" css:if-content="body.section-front-page" />
 
     <theme href="theme-wide.html" css:if-content="body.section-disclaimer" />
+    <theme href="theme-wide.html" css:if-content="body.section-kontakt" />
     
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">

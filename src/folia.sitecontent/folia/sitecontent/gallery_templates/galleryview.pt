@@ -19,9 +19,9 @@
                 <a class="hidden prev browse pull-left" id="thumb-prev">
                   <i class="icon-chevron-left"></i>
                 </a>
-                <div class="panels">
+                <div class="gallery-panels">
                     <tal:thumb tal:repeat="item view/image_list">
-                    <div class="panel">
+                    <div class="gallery-panel">
                           <img class="ximg-thumbnail"
                             tal:attributes="src item/original_url;
                                             width item/original_width;

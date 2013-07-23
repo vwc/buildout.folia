@@ -23,16 +23,18 @@
   </head>
 
   <body class="frontpage">
-    <!--<header id="toolbar" class="navbar navbar-inverse navbar-fixed-top">
-      <a class="navbar-brand" href="#">Plone CMSUI Editbar</a>
-    </header>-->
-    <header id="topbar" class="container">
+    <header id="topbar" class="container container-fixed">
       <div class="row">
         <div class="col col-lg-4">
-          <h1 id="logo-wrapper"><a href="/" id="logo">Folia Werbetechnik</a></h1>
+          <div id="logo-wrapper"><a href="/" id="logo">Folia Werbetechnik</a></div>
         </div>
         <div class="col col-lg-8">
-          <nav class="xnavbar xnavbar-inverse" id="sections">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          <nav class="nav-collapse collapse navbar-responsive-collapse xnavbar xnavbar-inverse" id="sections">
             <ul class="nav xnavbar-nav nav-justified" id="main-nav">
               <li><a href="#">Home</a></li>
               <li><a href="#about">Leistungen</a></li>

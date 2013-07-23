@@ -11,13 +11,30 @@ input.standalone {
   .btn();
 }
 
+// Add fixed container 
+.container-fixed {
+    max-width: 960px;
+}
+
+// Tablets & small desktops only
+@media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
+    .container-fixed {
+        padding: @line-height-computed;
+    }
+}
+
 #toolbar + #topbar {
   margin-top: @navbar-height;
 }
 
 #topbar {
   padding-top: @navbar-height;
-  width: 960px;
+  padding-bottom: @line-height-computed;
+  //width: 960px;
+}
+
+#logo-wrapper {
+    max-width: 200px;
 }
 
 #logo {
@@ -29,20 +46,22 @@ input.standalone {
 }
 
 #sections {
-  margin-top: @line-height-computed;
-  #gradient > .vertical(#4b4b4b, 0%, #333, 100%);
+  //margin-top: @line-height-computed;
   #main-nav {
     .box-shadow(0 8px 6px -6px @gray);
     li {
       border-left: 2px solid #000;
       border-right: 1px solid @gray-light;
+      display: block;
       &.active a,
       &.selected a {
-        background: #d82020;
-        border-radius: 0px;
-        #gradient > .vertical(#d82020, 0%, darken(#d82020, 20%), 100%);
+        color: @brand-primary;
+        //background: #d82020;
+        //border-radius: 0px;
+        //#gradient > .vertical(#d82020, 0%, darken(#d82020, 20%), 100%);
         &:hover {
-          background:darken(#d82020, 20%);
+            text-decoration: underline;
+          //background:darken(#d82020, 20%);
         }
       }
     }
@@ -50,16 +69,57 @@ input.standalone {
       padding: @line-height-computed * 1.6 @line-height-computed;
       text-transform: uppercase;
       font-size: @font-size-base - 2px;
-      color: #fff;
+      color: @text-color;
       border-radius: 0px;
       &:hover {
-        background: #333;
+        text-decoration: underline;
+        background: transparent;
+        //background: #333;
       }
     }
   }
 }
 
+// Navigation styles for tablets and up
+@media (min-width: @screen-tablet) {
+    #sections {
+        #gradient > .vertical(#4b4b4b, 0%, #333, 100%);
+    }
+    #sections #main-nav li {
+        display:table-cell;
+        &.active a,
+        &.selected a {
+            color: #fff;
+            background: #d82020;
+            border-radius: 0px;
+            #gradient > .vertical(#d82020, 0%, darken(#d82020, 20%), 100%);
+            &:hover {
+              background:darken(#d82020, 20%);
+            }
+        }
+    }
+    #sections #main-nav li > a {
+        color: #fff;
+        &:hover {
+            background: #333;
+        }
+    }
+}
 
+
+// Small device navigation toggle
+.navbar-toggle {
+    background: @gray-lighter;
+    border-color: @text-color;
+    &:hover,
+    &:focus {
+        background-color: @gray-light;
+    }
+    // Bars
+    .icon-bar {
+        background-color: @text-color;
+    }
+}
 // Content area
 // --------------------------
 
@@ -68,9 +128,6 @@ input.standalone {
   color: @gray-lighter;
   background: @gray;
   .box-shadow(0 8px 6px -6px @gray);
-  .container {
-    width: 960px;
-  }
   .page-header h1,
   .documentFirstHeading {
     text-transform: uppercase;
@@ -119,7 +176,7 @@ body.section-disclaimer {
     margin-bottom: @line-height-computed / 2;
   }
   li.navTreeItem > a {
-    font-family: 'Roboto';
+    font-family: 'Roboto+Condensed';
     font-weight: 500;
     color: #fff;
     padding: 0px;
@@ -136,7 +193,7 @@ body.section-disclaimer {
 // ---------------------
 
 .gallery {
-  .panels {
+  .gallery-panels {
     background:transparent;
     position:relative;
     height:370px;
@@ -144,7 +201,7 @@ body.section-disclaimer {
     float:left;
     margin:0px;
     cursor:pointer;
-    .panel {
+    .gallery-panel {
       display:none;
       position:absolute;
       top:0;

@@ -9,7 +9,7 @@
             // enhancement.
             return;
         }
-        $(".slidetabs").tabs('.panels > div.panel', {
+        $(".slidetabs").tabs('.gallery-panels > .gallery-panel', {
             effect: 'fade',
             fadeOutSpeed: 1000,
             rotate: true
@@ -17,12 +17,6 @@
             autoplay: true,
             interval: 6000,
             clickable: false
-        });
-        $('xxbody').noisy({
-            intensity: 0.75,
-            size: 600,
-            opacity: 0.15,
-            monochrome: false
         });
         $('#content-wrapper').noisy({
             intensity: 0.9,
